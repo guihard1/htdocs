@@ -1,7 +1,9 @@
 <?php
 
-    require 'constants.php';
-    require 'data.php';
+global $nome, $idade, $sexo, $salarioMensal, $salarioAnual, $anos_necessarios_para_aposentar, $habilidades, $estaEmpregado, $esta_empregado;
+require 'constants.php';
+require 'data.php';
+require 'functions.php';
 /*
      Criando uma constante no PHP
     Através do define() você consegue definir uma constante, porém é mais semântico usar const mesmo.
@@ -12,14 +14,9 @@
 
     Ternário:
     condicao ? valor_se_atender_condicao : valor_se_nao_atender_condicao;
+*/
 
-    $situacaoEmprego = null;
-    if ($esta_empregado) {
-        $situacaoEmprego = 'Empregado';
-    } else {
-        $situacaoEmprego = 'Desempregado';
-    }
-
+/*
     $anos_necessarios_para_aposentar = null;
     if ($sexo == 'M') {
         $anos_necessarios_para_aposentar = IDADE_APOSENTADORIA_FEMININA;
@@ -84,16 +81,16 @@
             <p>Nome: <strong><?= $nome ?></strong></p>
             <p>Idade: <strong><?= $idade ?></strong></p>
             <p>Sexo: <strong><?= $sexo ?></strong></p>
-            <p>Salário Mensal: <strong>R$ <?= number_format($salarioMensal, 2, ',','.')?></strong></p>
-            <p>Salário Anual: <strong>R$ <?= number_format($salarioAnual, 2, ',','.') ?></strong></p>
-            <p>Status de Emprego: <strong><?= $situacaoEmprego ?></strong></p>
-            <p>Anos para Aposentadoria: <strong><?= $anos_necessarios_para_aposentar - $idade ?></strong></p>
+            <p>Salário Mensal: <strong>R$ <?= convertNumberToBRL($salarioMensal)?></strong></p>
+            <p>Salário Anual: <strong>R$ <?= calcularSalarioAnual($salarioMensal) ?></strong></p>
+            <p>Anos para Aposentadoria: <strong><?= anosParaAposentar($aposentadoria, $idade, $sexo) ?></strong></p>
             <p>Habilidades:
                 <strong>
                     <?=  //caso use o echo, não pode usar o shortcode <?= pois da erro, ou usa o echo ou usa o shortcode.
                     implode(', ', $habilidades); //implode serve para unir um array em uma string
                     ?>
                 </strong></p>
+            <p>Status de Emprego: <strong><?= statusEmprego($esta_empregado) ?></strong></>
         </div>
     </div>
 </body>

@@ -28,4 +28,4 @@ function entrarFesta($anoNascimento, $acompanhado = true) {
 
 echo entrarFesta(1994, false) . "<br>";
 echo entrarFesta(2016, true) . "<br>";
-echo entrarFesta(2014, false) . "<br>"; 
+echo entrarFesta(2014, false) . "<br>";
