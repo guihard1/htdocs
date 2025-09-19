@@ -1,5 +1,8 @@
 <?php
 
+$erro = '';
+$sucesso = '';
+
 $tecnologias = ['HTML', 'CSS', 'Javascript', 'PHP'];
 
 $tecnologias_banco = [
