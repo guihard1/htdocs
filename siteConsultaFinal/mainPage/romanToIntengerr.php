@@ -1,8 +1,7 @@
-<?php
 // Roman to Intenger
+<?php
 
 class Solution {
-    public $numRom = "I, V, X, L, C, D, M";
     public $s = [
         "I" => 1,
         "V" => 5,
@@ -19,12 +18,9 @@ class Solution {
      */
     function romanToInt($s) {
         $s = $this->s;
-        $numRom = $this->numRom;
-        for($i=0;$i<count($s);$i++){
-            $romanToInt = str_replace(array_keys($s), array_values($s), $numRom);
-            $romanToIntres = $romanToInt[0];
+        for($i=0;$i<count($s);$i++) {
+            $res = [];
         }
-
-        return $romanToIntres;
+        return $res[];
     }
 }
