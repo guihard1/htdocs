@@ -13,11 +13,9 @@ class Solution {
     /**
      * @param ListNode $list1
      * @param ListNode $list2
-     * @return true
+     * @return ListNode
      */
     function mergeTwoLists($list1, $list2) {
-        $sorted = array_merge((array)$list1, (array)$list2);
-        $sorted = sort($sorted);
-        return $sorted;
+        
     }
 }

@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fbdcc89-177b-443d-9311-3da069227389" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mainPage/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainPage/logo/LOGO GIROLANDO ATUALIZADA_INSTITUCIONAL BRANCA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainPage/styles/body.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainPage/styles/global.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainPage/styles/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainPage/styles/table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../siteConsultaFinal/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../siteConsultaFinal/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../siteConsultaFinal/ed/MergeTwoSortedLists.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../siteConsultaFinal/mainPage/romanToIntenger.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../siteConsultaFinal/mainPage/romanToIntengerr.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,8 +70,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-9c94529fcfe0-JavaScript-PS-252.26199.163" />
-        <option value="bundled-php-predefined-a98d8de5180a-f0a8ef430dfa-com.jetbrains.php.sharedIndexes-PS-252.26199.163" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PS-252.26199.163" />
+        <option value="bundled-php-predefined-a98d8de5180a-9b563d34894c-com.jetbrains.php.sharedIndexes-PS-252.26199.163" />
       </set>
     </attachedChunks>
   </component>
@@ -86,6 +85,8 @@
       <workItem from="1759503111782" duration="12611000" />
       <workItem from="1759747818563" duration="27648000" />
       <workItem from="1759783150156" duration="18000" />
+      <workItem from="1761236724440" duration="36000" />
+      <workItem from="1761246883487" duration="28000" />
     </task>
     <servers />
   </component>
