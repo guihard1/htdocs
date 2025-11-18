@@ -1,9 +1,28 @@
 <?php
 
+function meu_autoloader($class_name) {
+
+    $diretorios = ['classes/', 'trait/', 'outro_diretorio'];
+
+    foreach ($diretorios as $diretorio) {
+
+        $diretorio = strtolower($diretorio);
+        $class_name = strtolower($class_name);
+
+        if (file_exists($diretorio. $class_name . '.php')) {
+            include $diretorio . $class_name . '.php';
+            break;
+        }
+    }
+}
+
+spl_autoload_register("meu_autoloader");
+
 trait Logger {
 
     public function log($message) {
         echo '<br>[LOG]: '. $message . '<br>';
+        echo '<br>Datetime: '. date('d-m-Y'). '<br>';
     }
 }
 
@@ -13,11 +32,11 @@ class User {
 
     public function createUser() {
         echo 'Usuário criado.<br>';
-        $this->log('Usuário criado.<br>');
+        $this->log('Usuário criado.');
     }
 
     public function loginUser() {
-        echo 'Usuário logado.<br>';
+        echo '<br>Usuário logado.<br>';
         $this->log('Usuário logado.');
     }
 }

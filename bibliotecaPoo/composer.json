@@ -1,0 +1,15 @@
+{
+    "name": "lgsilva/biblioteca-poo",
+    "description": "Projeto pessoal de biblioteca poo",
+    "autoload": {
+        "psr-4": {
+            "Lgsilva\\BibliotecaPoo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Luiz Guilherme Campos Rodrigues da Silva"
+        }
+    ],
+    "require": {}
+}
