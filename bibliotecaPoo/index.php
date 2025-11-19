@@ -2,25 +2,19 @@
 
 require_once "vendor/autoload.php";
 
+use \Lgsilva\BibliotecaPoo\Estante;
 use \Lgsilva\BibliotecaPoo\Livro;
 
-echo 'Sistema da Biblioteca iniciado!';
+echo 'Sistema da Biblioteca iniciado!<br><br>';
 
-$livro = new Livro('Jorge Amado', 'Capitães da Areia');
-$disponibilidade[] = [
-    ];
+$livro1 = new Livro('Jorge Amado', 'Capitães da Areia', '');
+$livro2 = new Livro('John Green', 'Quem é você, Alaska?', '');
+$livro3 = new Livro('Robert Cecil Martin', 'Clean Code', '');
 
+$estante = new Estante();
+$estante->adicionarLivro($livro1);
+$estante->adicionarLivro($livro2);
+$estante->adicionarLivro($livro3);
 
-if($disponibilidade = true){
-    return 'Livro Disponivel!';
-} else {
-    return 'Livro Indisponivel!';
-}
-
-
-echo '<pre>';
-
-echo 'Livro: '. $livro->titulo . '<br>';
-echo 'Autor: '. $livro->autor . '<br>';
-echo 'Disponibilidade: '. $livro->marcarComoDisponivel . '<br>';
-//var_dump($livro);
+$livroEncontrado = $estante->buscarLivroPorTitulo('Clean Code');
+print_r($livroEncontrado);

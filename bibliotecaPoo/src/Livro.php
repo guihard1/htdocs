@@ -4,22 +4,19 @@ namespace Lgsilva\BibliotecaPoo;
 
 class Livro {
 
-    private string $title;
-    private string $author;
-    private bool $isAllowed = false;
+    public function __construct(private string $author, private string $title, private bool $isAllowed) {}
 
-    public function __construct(string $author, string $title) {
-
-        $this->autor = $author;
-        $this->titulo = $title;
-
+    public function getTitulo() {
+        return $this->title;
     }
 
-     public function marcarComoEmprestado(){
-        $this->isAllowed = false;
-     }
+    public function getAutor() {
+        return $this->author;
+    }
 
-     public function marcarComoDisponivel(){
-        $this->isAllowed = true;
-     }
+
+    public function disponibilidade(){
+       $this->isAllowed = true;
+       return $this->isAllowed;
+    }
 }
