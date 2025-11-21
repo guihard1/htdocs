@@ -36,6 +36,16 @@ class Estante {
     }
 
     public function listarLivrosDisponiveis(): array {
-        return [];
+
+//        $livrosDisponiveis = [];
+//
+//        foreach ($this->livros as $livroAtual) {
+//            $livrosDisponiveis[] = $livroAtual;
+//        }
+//        return $livrosDisponiveis;
+
+        return array_filter($this->livros, function ($livroAtual) {
+            return $livroAtual->estaDisponivel();
+        });
     }
 }

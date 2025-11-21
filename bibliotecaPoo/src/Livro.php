@@ -15,8 +15,15 @@ class Livro {
     }
 
 
-    public function disponibilidade(){
+    public function disponivel(): bool
+    {
        $this->isAllowed = true;
        return $this->isAllowed;
+    }
+
+    public function emprestado(): bool
+    {
+        $this->isAllowed = false;
+        return $this->isAllowed;
     }
 }
