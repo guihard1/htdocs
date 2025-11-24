@@ -14,14 +14,14 @@ class Estante {
         $this->livros = array_filter(
             $this->livros,
             function ($livroAtual) use ($livro) {
-                echo 'Livro Atual: ' . $livroAtual->getTitulo();
-                if ($livroAtual === $livro) {
-                    echo '- Livro removido!';
-                }
-                echo '<br>';
+
                 return $livroAtual !== $livro;
             }
         );
+    }
+
+    public function verificarLivro (Livro $livro): bool {
+        return in_array($livro, $this->livros);
     }
 
     public function buscarLivroPorTitulo(string $titulo): ?Livro {
@@ -35,7 +35,7 @@ class Estante {
         return null;
     }
 
-    public function listarLivrosDisponiveis(): array {
+    public function listarLivrosDisponiveis() {
 
 //        $livrosDisponiveis = [];
 //
@@ -45,7 +45,7 @@ class Estante {
 //        return $livrosDisponiveis;
 
         return array_filter($this->livros, function ($livroAtual) {
-            return $livroAtual->estaDisponivel();
+            return $livroAtual->disponivel();
         });
     }
 }

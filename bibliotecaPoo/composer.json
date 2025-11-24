@@ -11,5 +11,7 @@
             "name": "Luiz Guilherme Campos Rodrigues da Silva"
         }
     ],
-    "require": {}
+    "require": {
+      "ext-mysql_xdevapi": "*"
+    }
 }

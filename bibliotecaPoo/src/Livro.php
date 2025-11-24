@@ -4,7 +4,7 @@ namespace Lgsilva\BibliotecaPoo;
 
 class Livro {
 
-    public function __construct(private string $author, private string $title, private bool $isAllowed) {}
+    public function __construct(private string $author, private string $title, private bool $isAllowed = true) {}
 
     public function getTitulo() {
         return $this->title;
@@ -17,7 +17,6 @@ class Livro {
 
     public function disponivel(): bool
     {
-       $this->isAllowed = true;
        return $this->isAllowed;
     }
 

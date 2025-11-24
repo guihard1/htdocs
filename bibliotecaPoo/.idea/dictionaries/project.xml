@@ -2,6 +2,8 @@
   <dictionary name="project">
     <words>
       <w>estante</w>
+      <w>livro</w>
+      <w>usuario</w>
     </words>
   </dictionary>
 </component>
