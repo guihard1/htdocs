@@ -12,6 +12,7 @@
         }
     ],
     "require": {
-      "ext-mysql_xdevapi": "*"
+      "ext-mysql_xdevapi": "*",
+      "ext-pdo": "*"
     }
 }
