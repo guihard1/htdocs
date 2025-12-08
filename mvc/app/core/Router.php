@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/../controllers/HomeController.php';
+require_once __DIR__ . '/../controllers/NoticiasController.php';
 
 class Router {
 
@@ -10,9 +12,8 @@ class Router {
         $controllerName = $parts[0] ?? 'Home';
 
         $controllerName = ucfirst($controllerName) . 'Controller';
+        $controller = new $controllerName();
 
-        echo 'url: ' . var_dump($parts);
-        echo '<hr>';
-        echo 'controller: ' . $controllerName;
+        $controller->index();
     }
 }
