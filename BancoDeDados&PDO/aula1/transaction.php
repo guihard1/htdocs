@@ -60,6 +60,7 @@ try {
     $pdo->exec('ROLLBACK TO SAVEPOINT user1_savepoint');
 
     $pdo->commit();
+
 } catch (PDOException $e) {
     echo 'Erro na transação.' . $e->getMessage();
 }
